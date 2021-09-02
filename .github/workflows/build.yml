@@ -26,5 +26,5 @@ jobs:
           server: ada.dreamhost.com
           username: ${{ secrets.SFTP_USER }}
           password: ${{ secrets.SFTP_PASS }}
-          local-dir: './_site'
+          local-dir: './_site/'
           server-dir: '/jlantunez.com/new/'
