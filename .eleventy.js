@@ -6,7 +6,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.setDataDeepMerge(true);
 
-  eleventyConfig.addDataExtension('yaml', contents => yaml.safeLoad(contents));
+  eleventyConfig.addDataExtension('yaml', contents => yaml.load(contents));
 
   eleventyConfig.addNunjucksAsyncFilter('addHash', addHash);
 

@@ -4,8 +4,11 @@
   "description": "Personal website for jlantunez.com",
   "main": "index.js",
   "scripts": {
+    "start": "npm-run-all --parallel css eleventy js browsersync",
     "css": "postcss src/static/css/styles.css --o _site/static/css/styles.css --watch",
     "js": "rollup -c rollup.config.js -w",
+    "eleventy": "eleventy --watch",
+    "browsersync": "browser-sync start --server '_site' --files '_site' --port 8080 --no-notify",
     "build": "npm-run-all build:css build:js build:eleventy",
     "build:js": "rollup -c rollup.config.js",
     "build:css": "cross-env NODE_ENV=production postcss src/static/css/styles.css --o _site/static/css/styles.css",
@@ -65,6 +68,7 @@
     "rollup-plugin-terser": "^7.0.2"
   },
   "devDependencies": {
+    "browser-sync": "^2.27.5",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.3.2"
