@@ -1,2 +1,10 @@
-site_name: José Luís Antúnez
-twitter_user: jlantunez
+es:
+  site_name: José Luís Antúnez
+  twitter_user: jlantunez
+  title: José Luís Antúnez - Titulo
+  description: Descripción
+  image: /static/img/social-image.jpg
+  url: https://jlantunez.com/new
+en:
+  description: ""
+  title: José Luís Antúnez - Title

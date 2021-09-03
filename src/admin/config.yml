@@ -26,7 +26,6 @@ collections:
       - name: intro
         label: Intro Section
         file: src/_data/intro.yaml
-        # Enable i18n for this file.
         i18n: true
         fields:
           - { label: Tagline, name: tagline, widget: string, i18n: true }
@@ -44,6 +43,9 @@ collections:
     name: settings
     editor:
       preview: false
+    i18n:
+      structure: single_file
+      locales: [ es, en ]
     files:
       - label: Navigation
         name: navigation
@@ -62,6 +64,15 @@ collections:
       - label: Meta
         name: settings
         file: src/_data/meta.yaml
+        i18n: true
         fields:
           - { label: Site Name, name: site_name, widget: string }
+          - { label: Site URL, name: url, widget: string }
           - { label: Twitter User, name: twitter_user, widget: string }
+          - { label: Title, name: title, widget: string, i18n: true }
+          - { label: Description, name: description, widget: string, i18n: true }
+          - label: Social Image
+            name: image
+            widget: image
+            choose_url: false
+            i18n: true
