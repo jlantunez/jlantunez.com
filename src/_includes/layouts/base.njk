@@ -1,12 +1,35 @@
 <!doctype html>
-<html lang="{{ lang | default('es') }}">
+<html lang="{{ lang }}">
 <head>
+  {%- set pageTitle %}{{ meta | i18n('title', lang) }}{% endset -%}
+  {%- set pageDescription %}{{ meta | i18n('description', lang) }}{% endset -%}
+  {%- set pageSocialImg %}{{ meta.es.url }}{{ meta | i18n('image', lang) }}{% endset -%}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link type="text/css" rel="stylesheet" href="{{ '/static/css/styles.css' | addHash }}">
   <link rel="preconnect" href="/" crossorigin>
-  <title>Hello world!</title>
+  <title>{{ meta | i18n('title', lang) }}</title>
+  <meta name="description" content="{{ pageDescription }}"/>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@{{ meta.es.twitter_user }}" />
+  <meta name="twitter:site" content="@{{ meta.es.twitter_user }}">
+  <meta name="twitter:title" content="{{ pageTitle }}" />
+  <meta name="twitter:description" content="{{ pageDescription }}" />
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <meta name="twitter:image" content="{{ pageSocialImg }}" />
+  <meta property="og:title" content="{{ pageTitle }}" />
+  <meta property="og:description" content="{{ pageDescription }}" />
+  <meta property="og:image" content="{{ pageSocialImg }}" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;700&display=swap" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;700&display=swap" media="print" onload="this.media='all'" />
+
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;700&display=swap" />
+  </noscript>
 </head>
 <body>
 <main class="site-content">

@@ -1,6 +1,7 @@
 const yaml = require('js-yaml');
 const htmlmin = require('html-minifier');
 const addHash = require('./eleventy/filters/add-hash');
+const i18n = require('./eleventy/filters/i18n');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
@@ -9,6 +10,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addDataExtension('yaml', contents => yaml.load(contents));
 
   eleventyConfig.addNunjucksAsyncFilter('addHash', addHash);
+  eleventyConfig.addNunjucksFilter('i18n', i18n);
 
   // Copy Static Files to /_Site
   eleventyConfig.addPassthroughCopy({
