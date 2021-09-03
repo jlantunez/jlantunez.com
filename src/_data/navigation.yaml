@@ -1,0 +1,13 @@
+items:
+  - footer: false
+    text: Linkedin
+    url: https://www.linkedin.com/in/jlantunez/
+  - footer: true
+    text: Twitter
+    url: https://twitter.com/jlantunez
+  - footer: true
+    text: Email
+    url: mailto:jlantunez@gmail.com
+  - footer: false
+    text: Typeform
+    url: https://typeform.com

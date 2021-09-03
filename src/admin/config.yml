@@ -1,0 +1,67 @@
+backend:
+  branch: main
+  name: github
+  repo: jlantunez/jlantunez.com
+media_folder: "src/static/img"
+public_folder: "/static/img"
+
+site_url: https://jlantunez.com/new
+
+local_backend: true
+
+i18n:
+  structure: multiple_folders
+  locales: [es, en]
+  default_locale: es
+
+collections:
+  - name: home
+    label: Home
+    editor:
+      preview: false
+    i18n:
+      structure: single_file
+      locales: [ es, en ]
+    files:
+      - name: intro
+        label: Intro Section
+        file: src/_data/intro.yaml
+        # Enable i18n for this file.
+        i18n: true
+        fields:
+          - { label: Tagline, name: tagline, widget: string, i18n: true }
+          - { label: Description, name: description, widget: text, i18n: true }
+          - label: CTA
+            name: cta
+            widget: object
+            i18n: true
+            summary: 'CTA: {{fields.text}}'
+            fields:
+              - { label: Text, name: text, widget: string, i18n: true }
+              - { label: URL, name: url, widget: string, i18n: true }
+              - { label: Open in new tab, name: open_new_tab, widget: boolean, default: false }
+  - label: Settings
+    name: settings
+    editor:
+      preview: false
+    files:
+      - label: Navigation
+        name: navigation
+        file: src/_data/navigation.yaml
+        fields:
+          - label: Footer Links
+            label_singular: Footer Link
+            name: items
+            widget: list
+            allow_add: true
+            collapsed: false
+            fields:
+              - { label: Title, name: text, widget: string }
+              - { label: URL, name: url, widget: string }
+              - { label: Show in footer, name: footer, widget: boolean, default: true }
+      - label: Meta
+        name: settings
+        file: src/_data/meta.yaml
+        fields:
+          - { label: Site Name, name: site_name, widget: string }
+          - { label: Twitter User, name: twitter_user, widget: string }
