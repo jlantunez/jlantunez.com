@@ -1,0 +1,180 @@
+backend:
+  branch: main
+  name: github
+  repo: jlantunez/jlantunez.com
+media_folder: "src/static/img"
+public_folder: "/static/img"
+
+site_url: https://jlantunez.com
+
+local_backend: true
+
+i18n:
+  structure: multiple_folders
+  locales: [es, en]
+  default_locale: es
+
+collections:
+  - name: home
+    label: Home
+    editor:
+      preview: false
+    i18n:
+      structure: single_file
+      locales: [ es, en ]
+    files:
+      - name: cover
+        label: Cover Section
+        file: src/_data/cover.yaml
+        i18n: true
+        fields:
+          - { label: Title, name: title, widget: string, i18n: true }
+          - { label: Headline, name: headline, widget: string, i18n: true }
+          - { label: Description, name: description, widget: text, i18n: true }
+          - { label: Show separator, name: separator, widget: boolean, default: true }
+      - name: intro
+        label: Intro Section
+        file: src/_data/intro.yaml
+        i18n: true
+        fields:
+          - { label: title, name: title, widget: string, i18n: true }
+          - { label: Description, name: description, widget: text, i18n: true }
+      - name: approach
+        label: Approach Section
+        file: src/_data/approach.yaml
+        i18n: true
+        fields:
+          - { label: Tagline, name: tagline, widget: string, i18n: true }
+          - { label: Bottomline, name: bottomline, widget: string, i18n: true }
+          - label: Items
+            label_singular: Item
+            name: items
+            widget: list
+            allow_add: true
+            collapsed: false
+            i18n: true
+            fields:
+              - { label: Title, name: title, widget: string, i18n: true }
+              - { label: Copy, name: copy, widget: text, i18n: true }
+      - name: wuolah
+        label: "Case Study: Wuolah"
+        file: src/_data/wuolah.yaml
+        i18n: true
+        fields:
+          - { label: Title, name: title, widget: string, i18n: true }
+          - { label: Copy, name: copy, widget: text, i18n: true }
+          - label: Stats
+            label_singular: Stat
+            name: stats
+            widget: list
+            min: 2
+            max: 2
+            allow_add: true
+            collapsed: false
+            i18n: true
+            fields:
+              - { label: Amount, name: amount, widget: string, i18n: true }
+              - { label: Label, name: copy, widget: string, i18n: true }
+          - { label: Upload Title, name: upload_title, widget: string, i18n: true }
+          - label: Files
+            label_singular: File
+            name: files
+            widget: list
+            min: 3
+            max: 3
+            allow_add: true
+            collapsed: false
+            i18n: true
+            fields:
+              - { label: Name, name: name, widget: string, i18n: true }
+      - name: fcb
+        label: "Case Study: Barça"
+        file: src/_data/fcb.yaml
+        i18n: true
+        fields:
+          - { label: Title, name: title, widget: string, i18n: true }
+          - { label: Copy, name: copy, widget: text, i18n: true }
+          - { label: Shield ALT, name: alt, widget: string, i18n: true }
+      - name: tramontana
+        label: "Case Study: Tramontana"
+        file: src/_data/tramontana.yaml
+        i18n: true
+        fields:
+          - { label: Title, name: title, widget: string, i18n: true }
+          - { label: Copy, name: copy, widget: text, i18n: true }
+          - { label: Text ALT, name: alt, widget: string, i18n: true }
+          - label: Features
+            label_singular: Feature
+            name: features
+            widget: list
+            min: 3
+            max: 3
+            allow_add: true
+            collapsed: false
+            i18n: true
+            fields:
+              - { label: Amount, name: amount, widget: string, i18n: true }
+              - { label: Label, name: copy, widget: string, i18n: true }
+              - { label: Mobile Copy, name: mobile_copy, widget: string, i18n: true }
+              - label: Type
+                name: type
+                widget: select
+                options:
+                  - Surface
+                  - Year
+                  - Programs
+      - name: closing
+        label: Closing Section
+        file: src/_data/closing.yaml
+        i18n: true
+        fields:
+          - { label: Title, name: title, widget: string, i18n: true }
+          - { label: Text, name: text, widget: text, i18n: true }
+          - { label: Navigation Label, name: nav_label, widget: string, i18n: true }
+          - { label: Icon Label, name: top_label, widget: string, i18n: true }
+          - { label: Tooltip Text, name: tooltip_text, widget: string, i18n: true }
+  - label: Settings
+    name: settings
+    editor:
+      preview: false
+    i18n:
+      structure: single_file
+      locales: [ es, en ]
+    files:
+      - label: Navigation
+        name: navigation
+        file: src/_data/navigation.yaml
+        i18n: false
+        fields:
+          - label: Footer Links
+            label_singular: Footer Link
+            name: items
+            widget: list
+            allow_add: true
+            collapsed: false
+            i18n: false
+            fields:
+              - { label: Title, name: text, widget: string }
+              - { label: URL, name: url, widget: string }
+              - { label: Show in footer, name: footer, widget: boolean, default: true }
+              - { label: Show as network, name: seo, widget: boolean, default: true }
+      - label: Meta
+        name: settings
+        file: src/_data/meta.yaml
+        i18n: true
+        fields:
+          - { label: Site Name, name: site_name, widget: string }
+          - { label: Site URL, name: url, widget: string }
+          - { label: Hijack Scroll, name: lock_scroll, widget: boolean, default: false }
+          - { label: Twitter User, name: twitter_user, widget: string }
+          - { label: Title, name: title, widget: string, i18n: true }
+          - { label: Job Title, name: job_title, widget: string, i18n: true }
+          - { label: Email, name: email, widget: string }
+          - { label: Name, name: name, widget: string }
+          - { label: Description, name: description, widget: string, i18n: true }
+          - { label: Easter Egg, name: easter_egg, widget: text, i18n: true }
+          - label: Social Image
+            name: image
+            widget: image
+            choose_url: false
+            i18n: true

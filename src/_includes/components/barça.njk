@@ -1,0 +1,26 @@
+    <section class="section section--company section--barça" data-theme="040815" id="fcb">
+      <div class="section__content rounded">
+        <div class="section__content__wrapper">
+          <img class="barça__logo" loading="lazy" decoding="async" src="{{ '/static/img/barça/logo-culers-premium.png' | addHash }}" width="368" height="372" alt="{{ fcb | i18n('alt', lang) }}" />
+
+          <div class="barça__text">
+            <h2 class="barça__title has-semibold-weight is-heading-large animated-element">{{ fcb | i18n('title', lang) }}</h2>
+            <div class="barça__copy animated-element">{{ fcb | i18n('copy', lang) }}</div>
+          </div>
+
+          <div class="card__wrapper">
+            <img class="barça__card" loading="lazy" decoding="async" src="{{ '/static/img/barça/culers-card.png' | addHash }}" width="720" height="471" alt="" />
+            <img class="barça__cta" loading="lazy" decoding="async" src="{{ '/static/img/barça/btvplus-cta.png' | addHash }}" width="250" height="80" alt="Barça TV+" />
+          </div>
+          <div class="barça__oval blau animated-element"></div>
+          <div class="barça__oval grana animated-element"></div>
+
+          <div class="barça__bottom animated-element" aria-hidden="true">
+            {% for i in range(0, 5) -%}
+            <img class="trophy trophy--{{ loop.index }}" loading="lazy" decoding="async" src="{{ '/static/img/barça/trofeo.png' | addHash }}" width="64" height="92" alt="" />{% endfor %}
+          </div>
+        </div>
+
+        <img class="barça__camp-nou" loading="lazy" decoding="async" src="{{ '/static/img/barça/campnou.jpg' | addHash }}" width="846" height="1276" alt="" />
+      </div>
+    </section>

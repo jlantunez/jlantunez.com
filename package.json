@@ -1,0 +1,81 @@
+{
+  "name": "jlantunez.com",
+  "version": "1.0.0",
+  "description": "Personal website for jlantunez.com",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all --parallel css eleventy js browsersync",
+    "css": "postcss src/static/css/styles.css --o _site/static/css/styles.css --watch",
+    "js": "rollup -c rollup.config.js -w",
+    "eleventy": "eleventy --watch",
+    "browsersync": "browser-sync start --server '_site' --files '_site' --port 8080 --no-notify",
+    "build": "npm-run-all build:css build:js build:eleventy",
+    "build:js": "rollup -c rollup.config.js",
+    "build:css": "cross-env NODE_ENV=production postcss src/static/css/styles.css --o _site/static/css/styles.css",
+    "build:eleventy": "cross-env NODE_ENV=production eleventy",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlantunez/jlantunez.com.git"
+  },
+  "author": {
+    "name": "Jose Luís Antúnez",
+    "email": "jlantunez@gmail.com",
+    "url": "https://jlantunez.com"
+  },
+  "contributors": [
+    {
+      "name": "Antonio Laguna",
+      "email": "antonio@laguna.es",
+      "url": "https://antonio.laguna.es"
+    }
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/jlantunez/jlantunez.com/issues"
+  },
+  "homepage": "https://github.com/jlantunez/jlantunez.com#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^21.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.5",
+    "autoprefixer": "^10.3.7",
+    "babel-eslint": "^10.1.0",
+    "clipboard": "^2.0.8",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.0.8",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "hasha": "^5.2.2",
+    "js-yaml": "^4.1.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.9",
+    "postcss-calc": "^8.0.0",
+    "postcss-cli": "^9.0.1",
+    "postcss-custom-media": "^8.0.0",
+    "postcss-custom-selectors": "^6.0.0",
+    "postcss-import": "^14.0.2",
+    "postcss-media-minmax": "^5.0.0",
+    "postcss-nesting": "^8.0.1",
+    "postcss-sort-media-queries": "^4.1.0",
+    "postcss-variables": "^1.1.1",
+    "rollup": "^2.58.0",
+    "rollup-plugin-filesize": "^9.1.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "tinybounce": "^1.2.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1"
+  }
+}

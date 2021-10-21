@@ -1,0 +1,60 @@
+    <section class="section section--company section--wuolah" data-theme="f5f7f9" id="wuolah">
+      <div class="section__content rounded">
+        <div class="section__content__wrapper">
+          <div class="wuolah__left">
+            <img class="wuolah__logo animated-element" loading="lazy" decoding="async" src="{{ '/static/img/wuolah/logo.png' | addHash }}" width="861" height="159" alt="Wuolah" />
+
+            <div class="wuolah__copy__wrapper">
+              <h2 class="wuolah__title is-heading-large animated-element">{{ wuolah | i18n('title', lang) }}</h2>
+              <div class="wuolah__copy animated-element">
+                {{ wuolah | i18n('copy', lang) | newline2br | safe }}
+              </div>
+            </div>
+
+            <ul class="wuolah__stats on-desktop-only" role="list">
+              {%- for stat in wuolah | i18n('stats', lang) %}
+              <li class="stat animated-element">
+                <div class="stat__title is-heading-small has-semibold-weight has-color-dark">{{ stat.amount }}</div>
+                <div class="stat__copy">{{ stat.copy }}</div>
+              </li>
+            {% endfor %}</ul>
+          </div>
+          <div class="wuolah__right">
+            <div class="wuolah__image">
+              <img class="image__tornado" loading="lazy" decoding="async" src="{{ '/static/img/wuolah/tornado.png' | addHash }}" width="783" height="948" alt="" />
+              <div class="wuolah__rectangle left has-color-dark">
+                <div class="rectangle__header">
+                  <img loading="lazy" decoding="async" src="{{ '/static/img/wuolah/folder.png' | addHash }}" class="header__image" width="44" height="31" alt="" />
+                  {{ wuolah | i18n('upload_title', lang) }}
+                </div>
+                <ul class="rectangle__files" role="list">
+                  {%- for file in wuolah | i18n('files', lang) %}
+                  <li class="file animated-element file--{{ loop.index }}">
+                    <div class="file__icon">
+                      <img class="file__image" loading="lazy" decoding="async" src="{{ '/static/img/wuolah/document.png' | addHash }}" width="32" height="40" alt="" />
+                    </div>
+                    <div class="file__details">
+                      <div class="file__name">{{ file.name }}</div>
+                      <div class="file__progress">
+                        <div class="file__bar">
+                          <div class="bar__value" style="width: {% if loop.index === 3 %}13%{% elseif loop.index === 1 %}34%{% else %}73%{% endif %}"></div>
+                        </div>
+                        <div class="file__percent">
+                          {% if loop.index === 3 %}13%{% elseif loop.index === 1 %}34%{% else %}73%{% endif %}
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                {% endfor %}</ul>
+              </div>
+              <div class="wuolah__rectangle right">
+                <div class="rectangle__chat">
+                  <img class="chat__image" loading="lazy" decoding="async" src="{{ '/static/img/wuolah/chat.png' | addHash }}" width="30" height="30" alt="" />
+                </div>
+                <img class="rectangle__image" loading="lazy" decoding="async" src="{{ '/static/img/wuolah/isabel.jpg' | addHash }}" width="329" height="570" alt="Wuolah - Isabel será jueza." />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

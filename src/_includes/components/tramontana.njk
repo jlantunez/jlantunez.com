@@ -1,0 +1,41 @@
+    <section class="section section--company section--tramontana" data-theme="e5e5e5" id="tramontana">
+      <div class="section__content">
+        <div class="tramontana__line horizontal first"></div>
+        <div class="tramontana__line horizontal second"></div>
+        <div class="tramontana__line vertical first"></div>
+        <div class="tramontana__line vertical second"></div>
+
+        <div class="section__content__wrapper">
+          <svg class="tramontana__logo" viewBox="0 0 42 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M28.635 23.044 21.861 1.803h17.504l.003 21.241H28.635Zm10.732 4.016-.02.805c-.172 4.689-2.016 9.112-5.194 12.477l-4.942-15.498h10.156v2.216Zm-17.78 19.109V24.844h5.756L32.72 41.71a18.439 18.439 0 0 1-11.133 4.46Zm0-39.365 5.182 16.24h-5.182V6.804Zm-1.779 16.24h-5.296l5.296-16.328v16.328Zm0 23.133a18.435 18.435 0 0 1-11.36-4.445l5.48-16.888h5.88v21.333Zm-18.01-18.28-.003-3.053h10.26l-5.038 15.53c-3.195-3.363-5.047-7.785-5.22-12.477Zm-.02-26.094h17.753l-6.893 21.241H1.796L1.779 1.803ZM0 0l.02 27.931C.432 39.187 9.46 48 20.57 48c11.115 0 20.14-8.82 20.552-20.083l.02-27.808V0H0Z" fill="#111"/></svg>
+
+          <div class="tramontana__text">
+            <img class="tramontana__humanismo on-mobile-only animated-element" loading="lazy" decoding="async" width="690" height="90" src="{{ '/static/img/tramontana/humanismo.png' | addHash }}" alt="{{ tramontana | i18n('alt', lang) }}" />
+            <img class="tramontana__humanismo on-larger-than-mobile animated-element" loading="lazy" decoding="async" width="1298" height="104" src="{{ '/static/img/tramontana/humanismo-desk.png' | addHash }}" alt="{{ tramontana | i18n('alt', lang) }}" />
+
+            <h2 class="tramontana__section-title is-heading-large tramontana__dark has-semibold-weight animated-element">{{ tramontana | i18n('title', lang) }}</h2>
+            <div class="tramontana__copy animated-element">
+              {{ tramontana | i18n('copy', lang) }}
+            </div>
+          </div>
+
+          <div class="tramontana__features">
+            <ul class="features__list" role="list">
+              {%- for feature in tramontana | i18n('features', lang) %}
+              <li class="features__feature features__feature--{{ loop.index }} {{ feature.type | lower }}">
+                <div class="feature__wrapper">
+                  <div class="shape__wrapper animated-element">
+                    <div class="features__shape"></div>
+                    <div class="features__shape__detail"></div>
+                  </div>
+
+                  <div class="features__title tramontana__dark is-heading-small animated-element">{{ feature.amount }}{% if feature.type === 'Surface' %} <span class="features__unit">m²</span>{% endif %}</div>
+                  {% if feature.mobile_copy %}
+                  <div class="features__copy on-mobile-only animated-element">{{ feature.mobile_copy }}</div>
+                  <div class="features__copy on-larger-than-mobile animated-element">{{ feature.copy }}</div>{% else %}<div class="features__copy animated-element">{{ feature.copy }}</div>{% endif %}
+                </div>
+              </li>{% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>

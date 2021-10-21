@@ -1,0 +1,72 @@
+{%- set pageTitle %}{{ meta | i18n('title', lang) }}{%- endset -%}
+{%- set pageDescription %}{{ meta | i18n('description', lang) }}{%- endset -%}
+{%- set pageSocialImg -%}{{ meta.es.url }}{{ meta | i18n('image', lang) }}{%- endset -%}
+<!doctype html>
+<html lang="{{ lang }}" class="no-js{% if meta.es.lock_scroll %} lock-scroll{% endif %}">
+<head>
+  <!--
+{{ meta | i18n('easter_egg', lang) | commentFormat }}
+    -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link type="text/css" rel="stylesheet" href="{{ '/static/css/styles.css' | addHash }}">
+  <link rel="preconnect" href="/" crossorigin>
+  <title>{{ meta | i18n('title', lang) }}</title>
+  <meta name="description" content="{{ pageDescription }}"/>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@{{ meta.es.twitter_user }}" />
+  <meta name="twitter:site" content="@{{ meta.es.twitter_user }}">
+  <meta name="twitter:title" content="{{ pageTitle }}" />
+  <meta name="twitter:description" content="{{ pageDescription }}" />
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <meta name="twitter:image" content="{{ pageSocialImg }}" />
+  <meta property="og:title" content="{{ pageTitle }}" />
+  <meta property="og:description" content="{{ pageDescription }}" />
+  <meta property="og:image" content="{{ pageSocialImg }}" />
+
+  <link rel="alternate" hreflang="{% if lang === 'es' %}es{% else %}en{% endif %}" href="{{ meta.es.url }}{% if lang === 'es' %}/en/{% endif %}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=PT+Serif:ital@1&display=swap" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=PT+Serif:ital@1&display=swap" media="print" onload="this.media='all'" />
+
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=PT+Serif:ital@1&display=swap" />
+  </noscript>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/static/img/icons/apple-touch-icon.png' | addHash }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/static/img/icons/favicon-32x32.png' | addHash }}" data-href-light="{{ '/static/img/icons/favicon-32x32.png' | addHash }}" data-href-dark="{{ '/static/img/icons/favicon-32x32-dark.png' | addHash }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/static/img/icons/favicon-16x16.png' | addHash }}" data-href-light="{{ '/static/img/icons/favicon-16x16.png' | addHash }}" data-href-dark="{{ '/static/img/icons/favicon-16x16-dark.png' | addHash }}">
+  <link rel="mask-icon" href="{{ '/static/img/icons/safari-pinned-tab.svg' | addHash }}" color="#5bbad5">
+  <script>
+    (function(){document.documentElement.setAttribute("class","js");if("not-all"!==window.matchMedia("(prefers-color-scheme").media){var a=window.matchMedia("(prefers-color-scheme: dark)"),d=document.querySelectorAll('link[rel="icon"]'),c=function(){var e=a.matches?"hrefDark":"hrefLight";Array.prototype.slice.call(d).forEach(function(b){b.href=b.dataset[e]})};a.addEventListener("change",c);c()}})();
+  </script>
+  <meta name="theme-color" content="#ffffff">
+  <style>
+    .section--cover .animated-element {
+      opacity: 0;
+      transform: translate3d(0, 40vh, 0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .animated-element {
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+{% include 'components/json-ld.njk' %}
+  <main class="site-content">{% block article %}{{ content | safe }}{% endblock %}  </main>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+{% if not meta.es.lock_scroll -%}
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+{%- endif %}
+  <script defer src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+{% include 'components/monogram.njk' %}
+  <script defer src="{{ '/static/js/scripts.js' | addHash }}"></script>
+</body>
+</html>

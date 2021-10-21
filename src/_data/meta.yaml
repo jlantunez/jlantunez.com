@@ -1,0 +1,29 @@
+es:
+  lock_scroll: false
+  site_name: José Luis Antúnez
+  name: José Luis Antúnez
+  url: https://jlantunez.com
+  easter_egg: |-
+    Adriano Olivetti decía que «la empresa que funciona
+    en un país que no funciona es inútil» y
+    Coco Chanel que «los tiempos difíciles
+    despiertan un deseo instintivo de autenticidad».
+    Construyamos a partir de ahí.
+    Construyamos para crear algo que inspire y perdure.
+  job_title: Tech Builder
+  twitter_user: jlantunez
+  title: José Luis Antúnez
+  image: /static/img/social-image.png
+  email: jlantunez@gmail.com
+  description: La estrategia de la pertenencia.
+en:
+  description: Companies that matter.
+  title: José Luis Antúnez
+  lock_scroll: false
+  easter_egg: |-
+    Adriano Olivetti once said that beauty and freedom
+    show us the path to happiness, and Coco Chanel
+    was convinced that hard times arouse
+    an instinctive desire for authenticity.
+    Let’s put this wisdom into practice.
+    Create something of lasting value.

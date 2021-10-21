@@ -1,0 +1,37 @@
+es:
+  title: Elevar la formación
+  copy: Instituto Tramontana existe para elevar el nivel de quienes crean
+    soluciones. Utilitas y delectus de la mano. Dirijo el programa de narrativa.
+  alt: Humanismo
+  features:
+    - amount: "2019"
+      copy: Fundación
+      mobile_copy: Fundación
+      type: Year
+    - amount: "380"
+      copy: Espacio inspirador
+      mobile_copy: Espacio
+      type: Surface
+    - amount: "10"
+      copy: Programas
+      mobile_copy: Programas
+      type: Programs
+en:
+  title: Elevate training
+  copy: The purpose of Instituto Tramontana is to help those who create solutions
+    excel by combining utilitas and delectus. I am responsible for the narrative
+    course.
+  alt: Humanism
+  features:
+    - amount: "2019"
+      copy: Foundation
+      mobile_copy: null
+      type: Year
+    - amount: "380"
+      copy: Inspiring space
+      mobile_copy: Space
+      type: Surface
+    - amount: "10"
+      copy: Programs
+      mobile_copy: null
+      type: Programs

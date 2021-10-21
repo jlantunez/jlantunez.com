@@ -1,0 +1,11 @@
+.section--intro {
+  margin-bottom: var(--size-section-separation);
+
+  & .title {
+    margin-bottom: 1.75rem;
+
+    & + .animated-element {
+      transition-delay: 0.15s, 0.15s;
+    }
+  }
+}

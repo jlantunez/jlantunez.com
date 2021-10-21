@@ -1,0 +1,444 @@
+.section--tramontana {
+  & .section__content {
+    align-items: stretch;
+    background-color: var(--color-tramontana);
+    display: flex;
+    position: relative;
+  }
+
+  & .section__content__wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  & .tramontana__line {
+    background-color: #dbd6c6;
+    transition: opacity 1s;
+    opacity: 0;
+    position: absolute;
+
+    @media (--dark-mode) {
+      background-color: #7a8099;
+    }
+
+    @media (--animation-ok) {
+      transition: transform 1s, opacity 1s;
+    }
+
+    &.horizontal {
+      height: 0.0625rem;
+      width: 3rem;
+
+      @media (--animation-ok) {
+        transform: scaleX(0);
+      }
+
+      @media (--viewport-md) {
+        width: auto;
+      }
+
+      &.first {
+        left: 1.5rem;
+        top: 2rem;
+
+        @media (--viewport-md) {
+          left: -1.25rem;
+          right: -1.25rem;
+          top: 0;
+        }
+      }
+
+      &.second {
+        bottom: 2rem;
+        right: 1.5rem;
+
+        @media (--viewport-md) {
+          bottom: 0;
+          left: -1.25rem;
+          right: -1.25rem;
+        }
+      }
+    }
+
+    &.vertical {
+      height: 3rem;
+      width: 0.0625rem;
+
+      @media (--animation-ok) {
+        transform: scaleY(0);
+      }
+
+      @media (--viewport-md) {
+        height: auto;
+      }
+
+      &.first {
+        left: 2rem;
+        top: 1.5rem;
+
+        @media (--viewport-md) {
+          bottom: -1.25rem;
+          left: 0;
+          top: -1.25rem;
+        }
+      }
+
+      &.second {
+        right: 2rem;
+        bottom: 1.5rem;
+
+        @media (--viewport-md) {
+          bottom: -1.25rem;
+          right: 0;
+          top: -1.25rem;
+        }
+      }
+    }
+  }
+
+  & .tramontana__logo {
+    display: block;
+    height: 2.5rem;
+    margin: 1.75rem auto 4rem;
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+
+    @media (--viewport-md) {
+      height: 3rem;
+      left: 50%;
+      position: absolute;
+      top: 5rem;
+      transform: translateX(-50%);
+    }
+
+    @media (prefers-reduced-motion: no-preference) and (width > 42.75em) {
+      position: static;
+      margin-bottom: 4.5rem;
+      margin-top: 0;
+      transform: translate3d(-50%, 50%, 0);
+    }
+  }
+
+  & .tramontana__text {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  & .tramontana__humanismo {
+    height: 1.875rem;
+    transition-delay: 0.1s, 0.1s;
+    transform: translate3d(0, 50%, 0);
+
+    @media (--viewport-md) {
+      height: 3.5rem;
+    }
+  }
+
+  & .tramontana__copy,
+  & .tramontana__section-title {
+    position: relative;
+  }
+
+  & .tramontana__copy {
+    max-width: 18rem;
+    transition-delay: 0.3s, 0.3s;
+
+    @media (--viewport-md) {
+      max-width: 21.5rem;
+    }
+  }
+
+  & .tramontana__section-title {
+    line-height: 1.33;
+    margin-bottom: 0.5rem;
+    margin-top: -1rem;
+    text-transform: uppercase;
+    transition-delay: 0.2s, 0.2s;
+    width: 18rem;
+
+    @media (--viewport-md) {
+      line-height: 1.75;
+      margin-bottom: 0;
+      margin-top: -2rem;
+      width: auto;
+    }
+  }
+
+  & .tramontana__features {
+    align-items: center;
+    display: flex;
+    margin-top: 5.5rem;
+    max-width: 20.625rem;
+    width: 100%;
+
+    @media (--viewport-md) {
+      margin-top: 3.5rem;
+      max-width: 49rem;
+      padding: 0 2.5rem;
+    }
+
+    @media (--viewport-lg) {
+      padding: 0;
+    }
+  }
+
+  & .features__list {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+  }
+
+  & .features__feature {
+    display: flex;
+    text-align: center;
+
+    &:last-child {
+      justify-content: flex-end;
+    }
+
+    & .shape__wrapper,
+    & .features__copy,
+    & .features__title {
+      transform: translate3d(0, 100%, 0);
+    }
+
+    &.features__feature--1 {
+      & .shape__wrapper {
+        transition-delay: 0.4s, 0.4s;
+      }
+
+      & .features__copy,
+      & .features__title {
+        transition-delay: 0.5s, 0.5s;
+      }
+
+      & .features__shape,
+      & .features__shape__detail {
+        transition-delay: 0.8s, 0.8s;
+      }
+    }
+
+    &.features__feature--2 {
+      & .shape__wrapper {
+        transition-delay: 0.6s, 0.6s;
+      }
+
+      & .features__copy,
+      & .features__title {
+        transition-delay: 0.7s, 0.7s;
+      }
+
+      & .features__shape,
+      & .features__shape__detail {
+        transition-delay: 1.2s, 1.2s;
+      }
+    }
+
+    &.features__feature--3 {
+      & .shape__wrapper {
+        transition-delay: 0.8s, 0.8s;
+      }
+
+      & .features__copy,
+      & .features__title {
+        transition-delay: 0.9s, 0.9s;
+      }
+
+      & .features__shape,
+      & .features__shape__detail {
+        transition-delay: 1.6s, 1.6s;
+      }
+    }
+  }
+
+  & .features__list {
+    line-height: 1.777;
+
+    @media (--viewport-md) {
+      line-height: 1.333;
+    }
+  }
+
+  & .features__copy {
+    font-size: 0.875rem;
+    line-height: 1.7142;
+    position: relative;
+    top: -0.5rem;
+
+    @media (--viewport-md) {
+      font-size: 1rem;
+      line-height: 1.5;
+      top: 0;
+    }
+  }
+
+  & .shape__wrapper {
+    margin: 0 auto 0.5rem;
+    position: relative;
+  }
+
+  & .features__shape,
+  & .features__shape__detail {
+    position: absolute;
+  }
+}
+
+.features__feature.year,
+.features__feature.surface,
+.features__feature.programs {
+  & .features__shape,
+  & .features__shape__detail {
+    transition: transform .5s;
+  }
+}
+
+.features__feature.year,
+.features__feature.surface {
+  & .features__shape,
+  & .features__shape__detail {
+    border: 1px solid #333;
+  }
+
+  & .features__shape {
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  & .features__shape__detail {
+    left: 0;
+    top: 0;
+  }
+}
+
+.features__feature.year {
+  & .shape__wrapper {
+    height: 1.9375rem;
+    width: 2.3125rem;
+  }
+
+  & .features__shape,
+  & .features__shape__detail {
+    border-radius: 50%;
+  }
+
+  & .features__shape {
+    height: 1.5rem;
+    width: 1.5rem;
+
+    @media (--animation-ok) {
+      transform: translate3d(-6px, -3px, 0);
+    }
+  }
+
+  & .features__shape__detail {
+    background-color: #8faabd;
+    height: 1.5rem;
+    width: 1.5rem;
+
+    @media (--animation-ok) {
+      transform: translate3d(6px, 3px, 0);
+    }
+  }
+}
+
+.features__feature.surface {
+  & .shape__wrapper {
+    height: 2rem;
+    width: 2.0625rem;
+  }
+
+  & .features__shape,
+  & .features__shape__detail {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  & .features__shape {
+    @media (--animation-ok) {
+      transform: translate3d(-5px, -4px, 0);
+    }
+  }
+
+  & .features__shape__detail {
+    background-color: #d9c9bb;
+
+    @media (--animation-ok) {
+      transform: translate3d(5px, 4px, 0);
+    }
+  }
+}
+
+.features__feature.programs {
+  & .shape__wrapper {
+    height: 1.9375rem;
+    width: 2.3125rem;
+  }
+
+  & .features__shape,
+  & .features__shape__detail {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  & .features__shape {
+    border: 1px solid #333;
+    border-radius: 50%;
+    right: 0;
+    top: 0;
+    z-index: 1;
+
+    @media (--animation-ok) {
+      transform: translate3d(-6px, 4px, 0);
+    }
+  }
+
+  & .features__shape__detail {
+    background-color: #ff5353;
+    border-radius: 0 0 0 1.5rem;
+    bottom: 0;
+    left: 0;
+
+    @media (--animation-ok) {
+      transform: translate3d(2px, 2px, 0) scale(0.5);
+    }
+  }
+}
+
+.no-js .section--tramontana,
+.visible.section--tramontana {
+  & .tramontana__logo {
+    opacity: 1;
+
+    @media (prefers-reduced-motion: no-preference) and (width > 42.75em) {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+
+  & .tramontana__humanismo {
+    opacity: .3 !important;
+  }
+
+  & .features__shape,
+  & .features__shape__detail {
+    transform: translate3d(0, 0, 0) scale(1) !important;
+  }
+
+  & .tramontana__line {
+    opacity: 1;
+
+    &.horizontal {
+      transform: scaleX(1);
+    }
+
+    &.vertical {
+      transform: scaleY(1);
+    }
+  }
+}

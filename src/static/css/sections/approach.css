@@ -1,0 +1,141 @@
+.section--approach {
+  margin-bottom: var(--size-section-separation);
+
+  & .section__content {
+    display: flex;
+
+    @media (--viewport-lg) {
+      padding: 0 5rem;
+    }
+  }
+
+  & .section__content__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    position: relative;
+  }
+
+  & .approach__section-title {
+    font-size: var(--size-xs);
+    line-height: 2;
+    margin-bottom: 2rem;
+
+    @media (--viewport-lg) {
+      font-size: var(--size-medium);
+      line-height: 1.777;
+      margin-bottom: 2.5rem;
+      margin-left: -5rem;
+    }
+  }
+
+  & .approach__list {
+    margin: 0 auto;
+    max-width: 31.375rem;
+    padding: 0 1.25rem;
+
+    @media (--viewport-lg) {
+      padding: 0 0 0 3.375rem;
+    }
+  }
+
+  & .approach__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 1.25rem;
+
+      @media (--viewport-lg) {
+        margin-bottom: 2.5rem;
+      }
+    }
+
+    &.approach__item--1 {
+      transition-delay: 0.1s, 0.1s;
+    }
+
+    &.approach__item--2 {
+      transition-delay: 0.3s, 0.3s;
+    }
+
+    &.approach__item--3 {
+      transition-delay: 0.5s, 0.5s;
+    }
+  }
+
+  & .approach__number {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+
+    @media (--viewport-lg) {
+      background-color: var(--color-circle-bg);
+      border-radius: 100%;
+      height: 3rem;
+      left: -4.625rem;
+      margin-right: 0;
+      position: absolute;
+      top: -6px;
+      width: 3rem;
+    }
+  }
+
+  & .approach__title {
+    font-size: var(--size-medium);
+    font-weight: 600;
+  }
+
+  & .approach__title,
+  & .approach__content {
+    line-height: 1.777;
+  }
+
+  & .approach__bottom__wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.75rem;
+
+    @media (--viewport-lg) {
+      align-items: flex-end;
+      margin-top: 2rem;
+      margin-right: -5rem;
+    }
+  }
+
+  & .approach__bottom {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    @media (--viewport-lg) {
+      margin-top: -3.75rem;
+    }
+  }
+
+  & .module-circle {
+    margin-bottom: 0.75rem;
+    transition-delay: 0.7s, 0.7s;
+
+    @media (--viewport-lg) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  & .module-circle,
+  & .module-circle__circle {
+    height: 2.5rem;
+    width: 2.5rem;
+
+    @media (--viewport-md) {
+      height: 3rem;
+      margin-right: 0;
+      width: 3rem;
+    }
+  }
+
+  & .approach__bottom__wrapper .is-gradient-text {
+    transition-delay: 0.6s, 0.6s;
+  }
+}

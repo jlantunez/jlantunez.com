@@ -1,0 +1,30 @@
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "@id": "#siteOwner",
+      "name": "{{ meta.es.name }}",
+      "email": "{{ meta.es.email }}",
+      "jobTitle": "{{ meta | i18n('job_title', lang) }}",
+      "url": "{{ meta.es.url }}",
+      "sameAs":[{% for link in navigation | i18n('items', lang) | sameAs %}"{{ link.url }}"{% if not loop.last %},{% endif %}{% endfor %}]
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "publisher": {
+        "@type": "Person",
+        "@id": "#siteOwner"
+      },
+      "author":{
+        "@type":"Person",
+        "@id": "#siteOwner"
+      },
+      "headline": "{{ meta.es.site_name }}",
+      "description": "{{ meta | i18n('description', lang) }}",
+      "name": "{{ meta.es.site_name }}",
+      "url": "{{ meta.es.url }}"
+    }
+  </script>

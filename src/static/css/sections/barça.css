@@ -1,0 +1,334 @@
+.section--barça {
+  & .section__content {
+    align-items: stretch;
+    background-color: #040815;
+    color: var(--color-light);
+    display: flex;
+    overflow: hidden;
+    position: relative;
+
+    @media (prefers-color-scheme: dark) {
+      border: 1px solid #ffcc76;
+    }
+  }
+
+  & .section__content__wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+
+    @media (--viewport-md) {
+      flex-direction: row;
+    }
+  }
+
+  & .barça__logo {
+    height: 2.5rem;
+    left: 50%;
+    opacity: 0;
+    top: 1.75rem;
+    transform: translateX(-50%);
+    z-index: 2;
+
+    @media (--animation-ok) {
+      transform: translate3d(-50%, 50%, 0);
+    }
+
+    @media (--viewport-md) {
+      height: 3rem;
+      left: 0;
+      top: 0;
+      transform: none;
+    }
+
+    @media (prefers-reduced-motion: no-preference) and (width > 42.75em) {
+      transform: translate3d(0, 50%, 0) !important;
+    }
+  }
+
+  & .barça__text {
+    position: relative;
+    padding: 8rem 1.25rem 1.5rem;
+    z-index: 5;
+
+    @media (--viewport-md) {
+      max-width: 21.5rem;
+      padding: 4rem 0;
+    }
+  }
+
+  & .barça__title {
+    color: var(--color-barça);
+    line-height: 1.333;
+    margin-bottom: 0.5rem;
+    transition-delay: 0.1s, 0.1s;
+
+    @media (--viewport-md) {
+      line-height: 1.25;
+      margin-bottom: 1rem;
+    }
+  }
+
+  & .barça__copy {
+    line-height: 1.777;
+    transition-delay: 0.2s, 0.2s;
+  }
+
+  & .barça__card,
+  & .barça__oval,
+  & .barça__logo,
+  & .barça__camp-nou,
+  & .barça__cta,
+  & .barça__bottom {
+    position: absolute;
+  }
+
+  & .card__wrapper,
+  & .barça__bottom,
+  & .barça__logo,
+  & .barça__camp-nou {
+    transition: 1s opacity, 1s transform;
+  }
+
+  & .card__wrapper {
+    margin-top: 1.5rem;
+    opacity: 0;
+    position: relative;
+    transition-delay: 0.4s, 0.4s;
+    width: 11.8125rem;
+    z-index: 5;
+
+    @media (--animation-ok) and (width <= 42.75em) {
+      transform: translate3d(0, 10vh, 0);
+    }
+
+    @media (--viewport-md) {
+      left: auto;
+      margin-right: -12rem;
+      margin-top: 0;
+      position: absolute;
+      right: 50%;
+      top: 50%;
+      transform: translate(50%, -50%);
+      width: 12.25rem;
+    }
+
+    @media (prefers-reduced-motion: no-preference) and (width >= 64em) {
+      transform: translate3d(50%, 0, 0);
+    }
+
+    @media (--viewport-lg) {
+      left: 50%;
+      margin-left: 18%;
+      margin-right: 0;
+      right: auto;
+      transform: translate(-50%, -50%);
+    }
+
+    @media (prefers-reduced-motion: no-preference) and (width >= 64em) {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+
+  & .card__wrapper,
+  & .barça__card {
+    height: 7.75rem;
+
+    @media (--viewport-md) {
+      height: 8rem;
+    }
+  }
+
+  & .barça__card {
+    transform: rotate(-7.33deg);
+    filter: drop-shadow(0 1.75rem 3.5rem rgba(0, 0, 0, .5));
+  }
+
+  & .barça__cta {
+    bottom: 1.5rem;
+    filter: drop-shadow(0 0.875rem 1.75rem rgba(0, 0, 0, .5));
+    height: 1.75rem;
+    right: -1.5rem;
+    z-index: 6;
+
+    @media (--viewport-md) {
+      height: 2rem;
+      right: -2rem;
+    }
+
+    @media (--animation-ok) {
+      transform: rotate(-8deg) translate3d(-2.5rem, 0, 0);
+      z-index: -1;
+    }
+  }
+
+  & .barça__oval {
+    border-radius: 50%;
+    filter: blur(8.75rem);
+    height: 10.75rem;
+    width: 15.625rem;
+    transition-delay: 0.3s, 0.3s;
+    z-index: 1;
+
+    @media (--viewport-md) {
+      height: 12.5rem;
+      width: 18.125rem;
+    }
+
+    &.blau {
+      background-color: #004087;
+      left: -12%;
+      top: 30%;
+      transform: rotate(61.22deg) translateZ(0);
+      z-index: 2;
+
+      @media (--viewport-md) {
+        left: 4%;
+        top: 34%;
+        transform: rotate(-28.7deg) translateZ(0);
+      }
+    }
+
+    &.grana {
+      background-color: #f10a2a;
+      left: 35%;
+      top: 32%;
+      transform: rotate(61.22deg) translateZ(0);
+
+      @media (--viewport-md) {
+        left: 20%;
+        top: 11%;
+        transform: translateZ(0);
+      }
+
+      @media (--viewport-lg) {
+        left: 50%;
+      }
+    }
+  }
+
+  & .barça__bottom {
+    align-items: flex-end;
+    bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    transform: translate3d(0, 50%, 0);
+    transition-delay: 1.4s, 1.4s;
+    width: 100%;
+    z-index: 1;
+
+    @media (--viewport-md) {
+      bottom: 0;
+    }
+  }
+
+  & .trophy {
+    margin: 0 .5rem;
+
+    @media (--viewport-md) {
+      margin: 0 0.59375rem;
+    }
+
+    &.trophy--1,
+    &.trophy--5 {
+      height: 1.125rem;
+
+      @media (--viewport-md) {
+        height: 1.375rem;
+      }
+    }
+
+    &.trophy--2,
+    &.trophy--4 {
+      height: 1.875rem;
+
+      @media (--viewport-md) {
+        height: 2.0625rem;
+      }
+    }
+
+    &.trophy--3 {
+      height: 2.25rem;
+
+      @media (--viewport-md) {
+        height: 2.75rem;
+      }
+    }
+  }
+
+  & .barça__camp-nou {
+    height: 28.125rem;
+    object-fit: contain;
+    opacity: 0;
+    right: 0;
+    top: -9.625rem;
+    width: 18.625rem;
+
+    @media (--animation-ok) {
+      transform: translate3d(-2%, 0, 0);
+    }
+
+    @media (--viewport-md) {
+      height: 100%;
+      top: 0;
+      width: auto;
+    }
+  }
+}
+
+.no-js .section--barça,
+.visible.section--barça {
+  & .barça__logo,
+  & .card__wrapper,
+  & .barça__camp-nou {
+    opacity: 1;
+  }
+
+  & .barça__camp-nou {
+    transform: translate3d(0, 0, 0);
+  }
+
+  & .barça__logo {
+    transform: translate3d(-50%, 0, 0);
+
+    @media (--viewport-md) {
+      transform: translateZ(0) !important;
+    }
+  }
+
+  & .card__wrapper {
+    transform: translateZ(0);
+
+    @media (--viewport-md) {
+      transform: translate(50%, -50%);
+    }
+
+    @media (--viewport-lg) {
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  @media (--animation-ok) {
+    & .barça__cta {
+      animation: ctaCard 1s forwards 1.2s;
+    }
+  }
+}
+
+@keyframes ctaCard {
+  50% {
+    transform: rotate(8deg) translate3d(8rem, 0, 0);
+    z-index: 0;
+  }
+
+  51% {
+    z-index: 0;
+  }
+
+  100% {
+    transform: rotate(0) translate3d(0, 0, 0);
+    z-index: 1;
+  }
+}

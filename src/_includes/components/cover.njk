@@ -1,0 +1,30 @@
+    <section class="section section--cover has-accent-font" id="cover">
+      <div class="monogram monogram--animation">
+        <lottie-player class="monogram__player" style="width: 100px; height: 100px;" background="transparent" speed="1"></lottie-player>
+      </div>
+      <svg class="monogram monogram--static has-color-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 335 477"><path d="M189.8 0v16h-15c-17.7 0-32 14.3-32 32v260.2c0 63.8-30.6 168.5-142.8 168.5v-11.1c35 0 82.5-24.8 82.5-105.1V48c0-17.7-14.3-32-32-32h-15V0h154.3ZM318.1 201.6h16v120.7H231.3v-11.6c47.9 0 86.8-38.8 86.8-86.8v-22.3Z" fill="currentColor"/></svg>
+
+      <div class="section__content">
+        <div class="section__content__wrapper">
+          <div class="has-color-dark">
+            <h1 class="title is-accent-headline animated-element">
+              {{ cover | i18n('title', lang) | safe }}
+            </h1>
+            <p class="headline animated-element">{{ cover | i18n('headline', lang) | safe }}</p>
+            {% if cover | i18n('description', lang) %}
+            <div class="long-contained-copy">
+              <div class="animated-element">
+                {%- for paragraph in cover | i18n('description', lang) | newline2br(false) %}
+                  <p>{{ paragraph | safe }}</p>
+                {% endfor %}
+              </div>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      {% if cover.es.separator %}
+      <hr class="cover__separator" />
+      {% endif %}
+    </section>

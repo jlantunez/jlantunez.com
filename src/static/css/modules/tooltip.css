@@ -1,0 +1,58 @@
+.tooltip {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+
+  &::after,
+  &::before {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity .3s, visibility .3s;
+
+    @media (--animation-ok) {
+      transform: translateY(0.25rem);
+      transition: opacity .3s, visibility .3s, transform .3s;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-bottom: 0.3125rem;
+    margin-left: -1.5rem;
+    padding: 0.5rem;
+    width: 5rem;
+    border-radius: 0.1875rem;
+    background-color: rgba(51, 51, 51, 0.9);
+    color: var(--color-light);
+    content: attr(aria-label);
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.2;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-left: 0.75rem;
+    width: 0;
+    border-top: 0.3125rem solid rgba(51, 51, 51, 0.9);
+    border-right: 0.3125rem solid transparent;
+    border-left: 0.3125rem solid transparent;
+    content: ' ';
+    font-size: 0;
+    line-height: 0;
+  }
+
+  &.is-visible {
+    &::after,
+    &::before {
+      opacity: 1;
+      visibility: visible;
+      transform: translateZ(0);
+    }
+  }
+}

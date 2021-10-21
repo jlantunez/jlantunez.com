@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Novela';
+  src: url('../fonts/novela-displayregular-webfont.eot');
+  src: url('../fonts/novela-displayregular-webfont.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/novela-displayregular-webfont.woff2') format('woff2'),
+      url('../fonts/novela-displayregular-webfont.woff') format('woff'),
+      url('../fonts/novela-displayregular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Novela';
+  src: url('../fonts/novela-displayitalic-webfont.eot');
+  src: url('../fonts/novela-displayitalic-webfont.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/novela-displayitalic-webfont.woff2') format('woff2'),
+      url('../fonts/novela-displayitalic-webfont.woff') format('woff'),
+      url('../fonts/novela-displayitalic-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}

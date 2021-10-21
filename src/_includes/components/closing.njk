@@ -1,0 +1,19 @@
+{%- macro nav_link(link) %}
+          <p class="nav__link has-semibold-weight has-color-dark"{% if link.text === 'Email' %} data-tooltip-text="{{ closing | i18n('tooltip_text', lang) }}" data-clipboard-text="{{ link.url | replace('mailto:', '') }}" {% endif %}><a href="{{ link.url }}" target="_blank" rel="noreferrer" tabindex="-1">{{ link.text }}</a></p>
+{%- endmacro %}    <section class="section section--closing" id="closing">
+      <div class="section__content">
+        <div class="section__content__wrapper">
+          <div class="closing__text">
+            <h2 class="is-accent-headline closing__title animated-element">{{ closing | i18n('title', lang) }}</h2>
+            <div class="closing__copy animated-element">{{ closing | i18n('text', lang) | newline2br | safe }}</div>
+          </div>
+
+          <nav class="closing__nav animated-element" aria-label="{{ closing | i18n('nav_label', lang) }}">
+            {%- set halfs = navigation | i18n('items', lang) | footerLinks -%}
+            {% for link in halfs[0] %}{{ nav_link(link) }}{% endfor %}
+            <a href="#intro" class="closing__link" aria-label="{{ closing | i18n('top_label', lang) }}"><img src="{{ '/static/img/marco-aurelio.png' | addHash }}" width="76" height="112" alt="" class="nav__image human animated-element" loading="lazy" />
+            </a>{% for link in halfs[1] %}{{ nav_link(link) }}{% endfor %}
+          </nav>
+        </div>
+      </div>
+    </section>
