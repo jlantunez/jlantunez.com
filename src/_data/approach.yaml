@@ -1,11 +1,11 @@
 es:
-  tagline: ¿Cómo te puedo ayudar?
-  bottomline: Visión + Oficio
+  title: ¿Cómo te puedo ayudar?
+  headline: A liderar. A inspirar. A crecer.
   items:
     - title: Narrativa para liderar
       copy: >-
         Inmersión profunda en tu día a día para alinear tu ser, estar y hacer en
-        el mundo. 
+        el mundo.
 
         Misión > Modelos
     - title: Diseño para confiar
@@ -21,8 +21,8 @@ es:
 
         Comunidad > Clientes
 en:
-  tagline: How can I help you?
-  bottomline: Vision + Craft
+  title: How can I help?
+  headline: To lead. To inspire. To grow.
   items:
     - title: A narrative to lead
       copy: >-

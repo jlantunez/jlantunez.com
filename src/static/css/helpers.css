@@ -13,17 +13,6 @@
   font-family: var(--accent-font);
 }
 
-.is-gradient-text {
-  background: var(--gradient-accent);
-  font-size: var(--size-medium);
-  font-weight: 500;
-  line-height: 1.77;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .is-accent-headline {
   font-style: italic;
   font-size: 2.125rem;

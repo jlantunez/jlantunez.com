@@ -1,9 +1,26 @@
     <section class="section section--approach" id="approach">
       <div class="section__content">
         <div class="section__content__wrapper">
-          <h2 class="approach__section-title animated-element">
-            <span class="is-gradient-text">{{ approach | i18n('tagline', lang) }}</span>
-          </h2>
+          <div class="approach__info">
+            <div class="module-circle animated-element">
+              <div class="module-circle__circle">
+                <div class="module-circle__front">
+                  <picture>
+                    <source srcset="{{ '/static/img/rocket-dark.png' | addHash }}" media="(prefers-color-scheme: dark)">
+                    <img src="{{ '/static/img/rocket.png' | addHash }}" loading="lazy" decoding="async" width="119" height="120" alt="" class="module-circle__image rocket" />
+                  </picture>
+                </div>
+                <div class="module-circle__back">
+                  <img src="{{ '/static/img/rocket-color.png' | addHash }}" loading="lazy" decoding="async" width="119" height="120" alt="" class="module-circle__image rocket" />
+                </div>
+              </div>
+            </div>
+
+            <h2 class="approach__section-title is-accent-headline animated-element">
+              {{ approach | i18n('title', lang) }}
+            </h2>
+            <p class="has-accent-font approach__section-headline animated-element">{{ approach | i18n('headline', lang) }}</p>
+          </div>
 
           <ol class="approach__list" role="list">
             {%- for item in approach | i18n('items', lang) %}
@@ -17,25 +34,6 @@
               </div>
             </li>
           {% endfor %}</ol>
-
-          <div class="approach__bottom__wrapper">
-            <div class="approach__bottom">
-              <div class="module-circle animated-element">
-                <div class="module-circle__circle">
-                  <div class="module-circle__front">
-                    <picture>
-                      <source srcset="{{ '/static/img/rocket-dark.png' | addHash }}" media="(prefers-color-scheme: dark)">
-                      <img src="{{ '/static/img/rocket.png' | addHash }}" loading="lazy" decoding="async" width="119" height="120" alt="" class="module-circle__image rocket" />
-                    </picture>
-                  </div>
-                  <div class="module-circle__back">
-                    <img src="{{ '/static/img/rocket-color.png' | addHash }}" loading="lazy" decoding="async" width="119" height="120" alt="" class="module-circle__image rocket" />
-                  </div>
-                </div>
-              </div>
-              <p class="is-gradient-text animated-element">{{ approach | i18n('bottomline', lang) }}</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>

@@ -44,8 +44,8 @@ collections:
         file: src/_data/approach.yaml
         i18n: true
         fields:
-          - { label: Tagline, name: tagline, widget: string, i18n: true }
-          - { label: Bottomline, name: bottomline, widget: string, i18n: true }
+          - { label: Title, name: title, widget: string, i18n: true }
+          - { label: Headline, name: headline, widget: string, i18n: true }
           - label: Items
             label_singular: Item
             name: items

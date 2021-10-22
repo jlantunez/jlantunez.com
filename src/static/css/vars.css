@@ -35,8 +35,6 @@
   --color-black: #000;
   --color-cta: #111;
   --color-light: #fff;
-
-  --gradient-accent: linear-gradient(90deg, #c8239a 26%, #fab123 50%, #c8239a 87%, #b523fa 90%);
 }
 
 @media (--dark-mode) {
@@ -46,7 +44,6 @@
     --color-circle-bg: #343536;
     --color-dark: #fff;
     --color-link: #f391eb;
-    --gradient-accent: linear-gradient(90deg, #f6aa2b 0%, #b52be6 39%, #ff7f28 78%);
   }
 
   .section--company {
