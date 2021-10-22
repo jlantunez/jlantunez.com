@@ -14,11 +14,12 @@
     display: flex;
     flex-grow: 1;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     position: relative;
 
-    @media (--viewport-md) {
+    @media (--viewport-lg) {
       flex-wrap: nowrap;
+      justify-content: space-between;
     }
   }
 
@@ -29,7 +30,7 @@
     text-align: center;
     width: 100%;
 
-    @media (--viewport-md) {
+    @media (--viewport-lg) {
       flex-grow: 0;
       margin-bottom: 0;
       margin-right: 5rem;
@@ -41,7 +42,7 @@
     margin-bottom: 0.625rem;
     transition-delay: 0.1s, 0.1s;
 
-    @media (--viewport-md) {
+    @media (--viewport-lg) {
       font-size: 2rem;
     }
   }
@@ -51,7 +52,7 @@
     line-height: 2;
     transition-delay: 0.2s, 0.2s;
 
-    @media (--viewport-md) {
+    @media (--viewport-lg) {
       font-size: var(--size-large);
     }
   }

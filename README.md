@@ -1,4 +1,4 @@
-# jlantunez.com [![🚀 Deploy](https://github.com/jlantunez/jlantunez.com/actions/workflows/build.yml/badge.svg)](https://github.com/jlantunez/jlantunez.com/actions/workflows/build.yml)
+# jlantunez.com [![Deploy](https://github.com/jlantunez/jlantunez.com/actions/workflows/build.yml/badge.svg)](https://github.com/jlantunez/jlantunez.com/actions/workflows/build.yml)
 
 My personal site.
 
