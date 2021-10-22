@@ -23,11 +23,11 @@
   }
 
   & .approach__info {
-    flex-grow: 1;
     flex-shrink: 0;
     margin-bottom: 2.5rem;
     max-width: 22.375rem;
     text-align: center;
+    width: 100%;
 
     @media (--viewport-md) {
       flex-grow: 0;
@@ -59,11 +59,7 @@
   & .approach__list {
     margin: 0;
     max-width: 29.875rem;
-    padding: 0 0 0 1.625rem;
-
-    @media (--viewport-lg) {
-      padding: 0 0 0 1.625rem;
-    }
+    padding: 0 0 0 2.25rem;
   }
 
   & .approach__item {
@@ -94,7 +90,7 @@
     align-items: center;
     display: inline-flex;
     justify-content: center;
-    left: -2ch;
+    left: -2.25rem;
     position: absolute;
   }
 
