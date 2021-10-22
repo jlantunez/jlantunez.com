@@ -2,7 +2,7 @@
 
 My personal site.
 
-I help to build companies that matter. I work with brands that redefine our perceptions impulsing their narrative, product and creative direction.
+Create something of lasting value.
 
 ## Design
 
