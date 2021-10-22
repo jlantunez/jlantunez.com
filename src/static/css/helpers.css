@@ -24,6 +24,13 @@
   }
 }
 
+.is-title-headline {
+  font-size: var(--size-large);
+  line-height: 2;
+  margin-bottom: 0.375rem;
+  text-align: center;
+}
+
 .long-contained-copy {
   margin: 0 auto;
   max-width: 30rem;

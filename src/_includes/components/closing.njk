@@ -4,6 +4,9 @@
       <div class="section__content">
         <div class="section__content__wrapper">
           <div class="closing__text">
+            {% if closing | i18n('headline', lang) %}
+              <p class="headline has-accent-font has-color-dark is-title-headline animated-element">{{ closing | i18n('headline', lang) }}</p>
+            {% endif %}
             <h2 class="is-accent-headline closing__title animated-element">{{ closing | i18n('title', lang) }}</h2>
             <div class="closing__copy animated-element">{{ closing | i18n('text', lang) | newline2br | safe }}</div>
           </div>

@@ -24,10 +24,6 @@
     margin: 0 auto;
   }
 
-  & .closing__text {
-    max-width: 23rem;
-  }
-
   & .closing__copy {
     max-width: 20rem;
   }
@@ -50,13 +46,8 @@
   }
 
   & .closing__title {
-    font-size: var(--size-heading-small);
     line-height: 1.5;
-    margin: 0 -1.5rem 0.5rem;
-
-    @media (--viewport-md) {
-      margin: 0 0 0.5rem;
-    }
+    margin-bottom: 1.25rem;
   }
 
   & .closing__copy,

@@ -2,8 +2,11 @@
       <div class="section__content">
         <div class="section__content__wrapper">
           <div class="long-contained-copy">
+            {% if intro | i18n('headline', lang) %}
+              <p class="headline has-color-dark is-title-headline animated-element">{{ intro | i18n('headline', lang) }}</p>
+            {% endif %}
             {% if intro | i18n('title', lang) %}
-              <h2 class="title is-accent-headline has-color-dark has-semibold-weight animated-element">{{ intro | i18n('title', lang) }}</h2>
+              <h2 class="title is-accent-headline animated-element">{{ intro | i18n('title', lang) }}</h2>
             {% endif %}
             <div class="animated-element">
               {%- for paragraph in intro | i18n('description', lang) | newline2br(false) %}

@@ -1,11 +1,23 @@
 .section--intro {
   margin-bottom: var(--size-section-separation);
 
+  & .headline + .title {
+    transition-delay: 0.15s, 0.15s;
+  }
+
+  & .headline + .title + .animated-element {
+    transition-delay: 0.3s, 0.3s;
+  }
+
   & .title {
     margin-bottom: 1.75rem;
 
     & + .animated-element {
       transition-delay: 0.15s, 0.15s;
+    }
+
+    @media (--viewport-lg) {
+      margin-bottom: 4.625rem;
     }
   }
 }

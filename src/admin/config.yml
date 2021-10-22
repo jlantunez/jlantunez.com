@@ -37,7 +37,8 @@ collections:
         file: src/_data/intro.yaml
         i18n: true
         fields:
-          - { label: title, name: title, widget: string, i18n: true }
+          - { label: Title, name: title, widget: string, i18n: true }
+          - { label: Headline, name: headline, widget: string, i18n: true }
           - { label: Description, name: description, widget: text, i18n: true }
       - name: approach
         label: Approach Section
@@ -129,6 +130,7 @@ collections:
         i18n: true
         fields:
           - { label: Title, name: title, widget: string, i18n: true }
+          - { label: Headline, name: headline, widget: string, i18n: true }
           - { label: Text, name: text, widget: text, i18n: true }
           - { label: Navigation Label, name: nav_label, widget: string, i18n: true }
           - { label: Icon Label, name: top_label, widget: string, i18n: true }
