@@ -8,7 +8,7 @@ es:
       seo: true
       text: Twitter
       url: https://twitter.com/jlantunez
-    - footer: false
+    - footer: true
       seo: true
       text: Linkedin
       url: https://www.linkedin.com/in/jlantunez/
@@ -22,7 +22,7 @@ en:
       seo: true
       text: Twitter
       url: https://twitter.com/jlantunez
-    - footer: false
+    - footer: true
       seo: true
       text: Linkedin
       url: https://www.linkedin.com/in/jlantunez/
