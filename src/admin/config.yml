@@ -2,6 +2,8 @@ backend:
   branch: main
   name: github
   repo: jlantunez/jlantunez.com
+  base_url: https://jlantunez.com
+  auth_endpoint: auth/public/auth/
 media_folder: "src/static/img"
 public_folder: "/static/img"
 
