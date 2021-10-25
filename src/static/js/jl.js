@@ -1,3 +1,4 @@
+import smoothscroll from 'smoothscroll-polyfill';
 import tinybounce from 'tinybounce';
 import initWuolah from './wuolah';
 import Touch from './touch';
@@ -19,6 +20,8 @@ export default class JL {
     this.modeQuery = window.matchMedia('(prefers-color-scheme: dark)');
     this.scrollDuration = this.mediaQuery.matches ? 0 : 1;
     this.defaultMetaColor = JL.getDefaultBackground();
+
+    smoothscroll.polyfill();
 
     if (this.scrollLock) {
       gsap.set(this.scroller, { force3D: true });
