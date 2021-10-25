@@ -6,21 +6,19 @@
 
       <div class="section__content">
         <div class="section__content__wrapper">
-          <div class="has-color-dark">
-            <h1 class="title is-accent-headline animated-element">
-              {{ cover | i18n('title', lang) | safe }}
-            </h1>
-            <p class="headline animated-element">{{ cover | i18n('headline', lang) | safe }}</p>
-            {% if cover | i18n('description', lang) %}
-            <div class="long-contained-copy">
-              <div class="animated-element">
-                {%- for paragraph in cover | i18n('description', lang) | newline2br(false) %}
-                  <p>{{ paragraph | safe }}</p>
-                {% endfor %}
-              </div>
+          <h1 class="title is-accent-headline animated-element">
+            {{ cover | i18n('title', lang) | safe }}
+          </h1>
+          <p class="headline animated-element">{{ cover | i18n('headline', lang) | safe }}</p>
+          {% if cover | i18n('description', lang) %}
+          <div class="long-contained-copy">
+            <div class="animated-element">
+              {%- for paragraph in cover | i18n('description', lang) | newline2br(false) %}
+                <p>{{ paragraph | safe }}</p>
+              {% endfor %}
             </div>
-            {% endif %}
           </div>
+          {% endif %}
         </div>
       </div>
 
