@@ -11,10 +11,11 @@
           <div class="tramontana__text">
             <img class="tramontana__humanismo on-mobile-only animated-element" loading="lazy" decoding="async" width="690" height="90" src="{{ '/static/img/tramontana/humanismo.png' | addHash }}" alt="{{ tramontana | i18n('alt', lang) }}" />
             <img class="tramontana__humanismo on-larger-than-mobile animated-element" loading="lazy" decoding="async" width="1298" height="104" src="{{ '/static/img/tramontana/humanismo-desk.png' | addHash }}" alt="{{ tramontana | i18n('alt', lang) }}" />
-
-            <h2 class="tramontana__section-title is-heading-large tramontana__dark has-semibold-weight animated-element">{{ tramontana | i18n('title', lang) }}</h2>
-            <div class="tramontana__copy animated-element">
-              {{ tramontana | i18n('copy', lang) }}
+            <div class="tramontana__text-wrapper">
+              <h2 class="tramontana__section-title is-heading-large tramontana__dark has-semibold-weight animated-element">{{ tramontana | i18n('title', lang) }}</h2>
+              <div class="tramontana__copy animated-element">
+                {{ tramontana | i18n('copy', lang) }}
+              </div>
             </div>
           </div>
 

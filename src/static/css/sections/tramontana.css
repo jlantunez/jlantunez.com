@@ -111,14 +111,14 @@
       left: 50%;
       position: absolute;
       top: 5rem;
-      transform: translateX(-50%);
+      transform: translateZ(0);
     }
 
     @media (prefers-reduced-motion: no-preference) and (width > 42.75em) {
       position: static;
       margin-bottom: 4.5rem;
       margin-top: 0;
-      transform: translate3d(-50%, 50%, 0);
+      transform: translate3d(0, 50%, 0);
     }
   }
 
@@ -148,7 +148,7 @@
     transition-delay: 0.3s, 0.3s;
 
     @media (--viewport-md) {
-      max-width: 21.5rem;
+      max-width: 24.375rem;
     }
   }
 
@@ -417,7 +417,7 @@
     opacity: 1;
 
     @media (prefers-reduced-motion: no-preference) and (width > 42.75em) {
-      transform: translate3d(-50%, 0, 0);
+      transform: translate3d(0, 0, 0);
     }
   }
 
