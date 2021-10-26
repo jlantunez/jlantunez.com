@@ -82,8 +82,7 @@
     }
   }
 
-  .headline,
-  .long-contained-copy {
+  .headline {
     font-size: var(--size-medium);
     line-height: 1.6;
 
