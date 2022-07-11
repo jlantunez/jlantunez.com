@@ -3,9 +3,9 @@ es:
   copy: Ayudando en la nueva fase de crecimiento que implica trabajar la
     narrativa, estrategia, producto, dirección creativa y ronda.
   stats:
-    - amount: 1M
+    - amount: 2M
       copy: Estudiantes
-    - amount: 4M
+    - amount: 5M
       copy: Apuntes
   upload_title: Archivos subiendo...
   files:
@@ -22,7 +22,7 @@ en:
     - name: arendt-2.pdf
     - name: philo-xxc.docx
   stats:
-    - amount: 1M
+    - amount: 2M
       copy: Students
-    - amount: 4M
+    - amount: 5M
       copy: Notes
