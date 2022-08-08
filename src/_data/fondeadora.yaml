@@ -1,11 +1,12 @@
 es:
   title: Mejor dinero, mejor México
-  copy: La banca digital está floreciendo en América Latina. Durante los primeros
-    seis meses de 2022, he establecido una visión más inspiradora y pilares
-    básicos de marca.
+  copy: El sistema bancario en LATAM está roto. Desde de enero a junio de 2022
+    fortalecí la visión de empresa para esta década y la estrategia de marca.
   stats:
     - amount: +500K
       copy: Clientes
+    - amount: "150"
+      copy: Equipo
 en:
   title: A new Made in Mexico
   copy: Digital banking is booming across Latin America. During the first six
@@ -13,3 +14,5 @@ en:
   stats:
     - amount: +500K
       copy: Clients
+    - amount: "150"
+      copy: Employees
