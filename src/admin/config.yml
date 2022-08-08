@@ -126,6 +126,25 @@ collections:
                   - Surface
                   - Year
                   - Programs
+      - name: fondeadora
+        label: "Case Study: Fondeadora"
+        file: src/_data/fondeadora.yaml
+        i18n: true
+        fields:
+          - { label: Title, name: title, widget: string, i18n: true }
+          - { label: Copy, name: copy, widget: text, i18n: true }
+          - label: Stats
+            label_singular: Stat
+            name: stats
+            widget: list
+            min: 2
+            max: 2
+            allow_add: true
+            collapsed: false
+            i18n: true
+            fields:
+              - { label: Amount, name: amount, widget: string, i18n: true }
+              - { label: Label, name: copy, widget: string, i18n: true }
       - name: closing
         label: Closing Section
         file: src/_data/closing.yaml

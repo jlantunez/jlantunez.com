@@ -1,0 +1,30 @@
+    <section class="section section--fondeadora" data-theme="ff595a" id="fondeadora">
+      <div class="section__content rounded">
+        <div class="section__content__wrapper">
+          <div class="fondeadora__left">
+            <img class="fondeadora__logo animated-element" loading="lazy" decoding="async" src="{{ '/static/img/fondeadora/logo.png' | addHash }}" width="506" height="48" alt="Fondeadora" />
+
+            <div class="fondeadora__copy__wrapper">
+              <h2 class="fondeadora__title is-heading-large has-semibold-weight animated-element">{{ fondeadora | i18n('title', lang) }}</h2>
+              <div class="fondeadora__copy animated-element">
+                {{ fondeadora | i18n('copy', lang) | newline2br | safe }}
+              </div>
+            </div>
+
+            <ul class="fondeadora__stats on-desktop-only" role="list">
+              {%- for stat in fondeadora | i18n('stats', lang) %}
+              <li class="stat animated-element">
+                <div class="stat__title is-heading-small has-semibold-weight has-color-dark">{{ stat.amount }}</div>
+                <div class="stat__copy">{{ stat.copy }}</div>
+              </li>
+            {% endfor %}</ul>
+          </div>
+          <div class="fondeadora__right">
+            <img loading="lazy" decoding="async" src="{{ '/static/img/fondeadora/mobile.png' | addHash }}" class="fondeadora__mobile on-desktop-only" width="331" height="736" alt="" />
+            <div class="fondeadora__jen-wrapper">
+              <img loading="lazy" decoding="async" src="{{ '/static/img/fondeadora/jen.jpg' | addHash }}" class="fondeadora__jen" width="452" height="640" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

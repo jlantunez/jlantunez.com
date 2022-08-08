@@ -12,16 +12,19 @@
   }
 
   & .section__content {
+    --section-padding: 1.5rem;
+
     align-items: center;
     flex-grow: 1;
     margin: 0 auto;
     max-width: var(--size-section-max);
-    padding: 1.5rem;
+    padding: var(--section-padding);
 
     @media (--viewport-md) {
+      --section-padding: 5rem;
+
       margin: 0 auto;
       min-height: 40rem;
-      padding: 5rem;
     }
 
     &.rounded {
