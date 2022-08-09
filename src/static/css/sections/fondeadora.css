@@ -128,6 +128,7 @@
   width: 320px;
 
   @media (--viewport-lg) {
+    height: 100%;
     width: auto;
   }
 
