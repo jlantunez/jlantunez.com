@@ -6,7 +6,7 @@ Create something of lasting value.
 
 ## Design
 
-The site was designed in Figma, you can find it [here](https://www.figma.com/community/file/1033036370132034796).
+The site was designed in Figma, you can find it [here](https://www.figma.com/community/file/1208849100325708044).
 
 ![Welcome screen](/instructions/welcome.jpeg)
 
